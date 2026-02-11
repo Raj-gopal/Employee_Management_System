@@ -7,6 +7,12 @@ const Login = () => {
   const submitHandler = (e) => {
     e.preventDefault();
     console.log("Hello guysss, Form Submitted");
+
+    console.log("email is", email);
+    console.log("password is", password);
+
+    setemail("");
+    setpassword("");
   };
 
   return (
@@ -23,7 +29,7 @@ const Login = () => {
             type="email"
             placeholder="Enter your email"
             className="bg-neutral-800 hover:bg-neutral-900  w-96 h-10 pl-2"
-            input={email}
+            value={email}
             onChange={(e) => {
               setemail(e.target.value);
             }}
@@ -33,7 +39,7 @@ const Login = () => {
             type="password"
             placeholder="Enter your password"
             className="bg-neutral-800 hover:bg-neutral-900  w-96 h-10 mt-2 pl-2"
-            input={password}
+            value={password}
             onChange={(e) => {
               setpassword(e.target.value);
             }}
